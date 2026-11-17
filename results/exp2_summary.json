@@ -1,0 +1,8 @@
+{
+  "mono_violation_us": 0.02279461358313816,
+  "mono_violation_europe_raw": 0.023421607191988693,
+  "mobility_index_us": 0.18646115549998973,
+  "mobility_index_europe_raw": 0.17317618244012334,
+  "mobility_index_relative_gap_pct": 7.124793914444623,
+  "max_abs_sync_minus_exact": 0.02079160013031837
+}

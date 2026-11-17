@@ -171,6 +171,29 @@ def stochastic_monotonicity_violation(P: np.ndarray) -> float:
     return max_violation
 
 
+def calibrate_scale_to_price(build_matrix, target_price: float, N: int, initial_rating: int,
+                              bracket: tuple[float, float] = (0.02, 50.0)) -> tuple[float, np.ndarray]:
+    """Find the scale ``s`` such that ``build_matrix(s)`` reproduces the
+    target initial bond price q_0(initial_rating) at maturity N (page 45:
+    "we calibrate the second system by scaling its default column by a
+    constant ... so that the initial bond price matches").
+
+    ``build_matrix(s)`` must return a one-period transition matrix for a
+    given scale ``s`` (e.g. ``lambda s: regional_variant(base, s)``).
+    """
+    from scipy.optimize import brentq
+
+    def residual(s: float) -> float:
+        q = survival_probabilities(build_matrix(s), N)
+        return q[0, initial_rating] - target_price
+
+    lo, hi = bracket
+    f_lo, f_hi = residual(lo), residual(hi)
+    assert f_lo * f_hi <= 0, "calibration bracket does not contain a root; widen `bracket`"
+    scale = brentq(residual, lo, hi, xtol=1e-13)
+    return float(scale), build_matrix(scale)
+
+
 def jafry_schuermann_mobility(P: np.ndarray) -> float:
     """Average singular value of P - I (page 47)."""
     n = P.shape[0]

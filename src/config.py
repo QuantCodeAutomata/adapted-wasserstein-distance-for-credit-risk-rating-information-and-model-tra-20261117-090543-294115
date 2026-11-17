@@ -16,7 +16,7 @@ RANDOM_SEED = 12345  # global seed for reproducibility; not specified in the pap
 # estimation (Sec. 3.1-3.2, Theorems 3.6, 3.8, 3.10, 3.13, 3.15, Cor. 3.9)
 # ---------------------------------------------------------------------------
 EXP1_P = 0.90  # initial survival probability p, dimensionless; illustrative, not specified in the paper
-EXP1_DELTAS = np.array([0.30, 0.10, 0.03, 0.01, 0.003, 0.001])  # symmetric revision sizes delta for Q = p +/- delta (Corollary 3.9)
+EXP1_DELTAS = np.array([0.099, 0.05, 0.02, 0.005, 0.0015, 0.0005])  # symmetric revision sizes delta for Q = p +/- delta, delta < min(p,1-p)=0.1 (Corollary 3.9)
 EXP1_BETA_A = 5.0  # Beta-distribution shape parameter a for the alternative posterior law mu (rescaled to [0,1] with mean p); not specified in the paper
 EXP1_N_LIST = np.array([10, 30, 100, 300, 1000, 3000, 10000])  # sample sizes n for the calibration-preserving estimator (Theorem 3.10)
 EXP1_N_REPLICATIONS = 2000  # Monte Carlo replications per sample size for the O(n^{-1/2}) rate check; count not specified in the paper
