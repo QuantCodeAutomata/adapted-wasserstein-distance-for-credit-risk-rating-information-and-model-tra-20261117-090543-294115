@@ -88,6 +88,19 @@ def optimal_transport_cost(a: np.ndarray, b: np.ndarray, cost: np.ndarray) -> fl
     return float(res.fun)
 
 
+def adapted_distance_single_review(mu_support: np.ndarray, mu_probs: np.ndarray,
+                                    nu_support: np.ndarray, nu_probs: np.ndarray) -> float:
+    """AW_2^2(P^mu, P^nu) between two one-rating-review models sharing the
+    same initial price (Theorem 3.16 applied to N=2 with trivial E_0={p}):
+    since the whole review is revealed in a single step, the backward
+    recursion's base case V_1(x,y)=|x-y| is also V_0(p,p), i.e. AW_2^2 is
+    exactly the L^1 optimal-transport cost between the two posterior laws
+    mu and nu (no bicausal restriction binds with only one information
+    date)."""
+    cost = np.abs(mu_support[:, None] - nu_support[None, :])
+    return optimal_transport_cost(mu_probs, nu_probs, cost)
+
+
 def backward_dp_adapted_distance(
     state_spaces_p: list[np.ndarray], kernels_p: list[np.ndarray],
     state_spaces_q: list[np.ndarray], kernels_q: list[np.ndarray],

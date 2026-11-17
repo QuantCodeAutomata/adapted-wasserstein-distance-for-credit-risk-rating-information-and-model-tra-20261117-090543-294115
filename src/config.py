@@ -38,6 +38,15 @@ EXP3_P = 0.90  # initial survival probability, same convention as exp_1; illustr
 EXP3_MU_DELTA = 0.05  # symmetric two-point posterior law mu: Q = p +/- delta, not specified in the paper
 EXP3_NU_DELTA = 0.08  # symmetric two-point posterior law nu for the second (recalibrated) model, not specified in the paper
 EXP3_N_MC = 500_000  # Monte Carlo sample size for the L^2 hedging-error estimate; count not specified in the paper
+# Stability test (Proposition 3.22): two finite three-point posterior laws mu, nu
+# with mean exactly EXP3_P, used for the claim G=|Q-p| ("rating-date straddle",
+# page 23) and its variance-optimal hedge transferred between the two models.
+# Supports and probabilities are illustrative (not specified in the paper beyond
+# the straddle example) and chosen only so that each law has mean EXP3_P exactly.
+EXP3_STABILITY_MU_SUPPORT = np.array([0.70, 0.90, 0.95])
+EXP3_STABILITY_MU_PROBS = np.array([0.10, 0.50, 0.40])
+EXP3_STABILITY_NU_SUPPORT = np.array([0.60, 0.90, 0.93])
+EXP3_STABILITY_NU_PROBS = np.array([0.05, 0.45, 0.50])
 
 # ---------------------------------------------------------------------------
 # exp_4: Cox bond prices with deterministic hazards (Theorem 4.3, 4.7, 4.9,
