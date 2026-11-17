@@ -3,10 +3,10 @@ estimation (Sec. 3.1-3.2).
 
 Custom implementation of the closed-form formulas; no optimal-transport
 library is needed because Theorems 3.6, 3.8 and 3.13 reduce the adapted and
-ordinary Wasserstein distances to explicit expectations (verified against
-Context7 pyportfolioopt/skfolio/POT docs: none of them compute adapted or
-causal Wasserstein distances, so this module is implemented from the paper's
-formulas).
+ordinary Wasserstein distances to explicit expectations. General-purpose
+portfolio and optimal-transport libraries (pyportfolioopt, skfolio, POT) do
+not implement adapted or causal Wasserstein distances, so this module follows
+the paper's closed-form formulas directly.
 """
 from __future__ import annotations
 

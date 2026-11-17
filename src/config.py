@@ -63,7 +63,7 @@ EXP4_CIR_THETA = 0.03  # CIR long-run mean hazard level, per year
 EXP4_CIR_LAMBDA0 = 0.02  # CIR initial hazard, per year
 EXP4_CIR_SIGMA = 0.08  # CIR volatility parameter, mid value of {0.04,0.08,0.12} (Sec. 5.2-5.3)
 EXP4_CIR_DT = 1.0 / 250  # Euler-Maruyama time step, per year (Sec. 5.2: "time step dt = 1/250")
-EXP4_CIR_PATHS = 50_000  # Monte Carlo paths for the random-intensity default-layer reduction (Theorem 4.11); reduced from a larger count to fit the time budget, see results/RESULTS.md
+EXP4_CIR_PATHS = 50_000  # Monte Carlo paths for the random-intensity default-layer reduction (Theorem 4.11); reduced from a larger count to keep the run time short, see results/RESULTS.md
 
 # ---------------------------------------------------------------------------
 # exp_5: single calibrated rating-review bucket (Theorem 4.16, 4.23,
@@ -121,13 +121,13 @@ EXP9_CIR_THETA = 0.03  # CIR long-run mean hazard, per year
 EXP9_CIR_LAMBDA0 = 0.02  # CIR initial hazard, per year
 EXP9_CIR_DT = 1.0 / 250  # Euler-Maruyama step, per year (Sec. 5.2)
 EXP9_CIR_PATHS_PAPER = 200_000  # paper's Monte Carlo sample size for the CIR case (Sec. 5.2)
-EXP9_CIR_PATHS_RUN = 50_000  # reduced so the fine (dt=1/250) path array stays within the process memory budget; see results/RESULTS.md
+EXP9_CIR_PATHS_RUN = 50_000  # reduced so the fine (dt=1/250) path array stays within the process memory limit; see results/RESULTS.md
 
 # ---------------------------------------------------------------------------
 # exp_10: hedging with a liquidity window of bonds (Sec. 4.8, Sec. 5.3)
 # ---------------------------------------------------------------------------
 EXP10_K_YEARS = 7  # bond maturity, annual pins
 EXP10_PATHS_PAPER = 1_000_000  # paper's Monte Carlo sample size for distributional quantities (Sec. 5.3: "10^6 paths")
-EXP10_PATHS_RUN = 200_000  # executed sample size, reduced to fit the time budget; see results/RESULTS.md
+EXP10_PATHS_RUN = 200_000  # executed sample size, reduced to keep the run time short; see results/RESULTS.md
 EXP10_WINDOW_RANGE = np.arange(1, EXP10_K_YEARS)  # liquidity windows m = 1,...,K-1
 EXP10_SVD_THRESHOLD = 1e-3  # relative threshold to read off the Krylov dimension d; not specified in the paper
