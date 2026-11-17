@@ -42,3 +42,71 @@ def bernoulli_given_posterior(Q: np.ndarray, rng: np.random.Generator) -> np.nda
     the revealed posterior survival probability."""
     u = rng.uniform(size=Q.shape)
     return (u < Q).astype(float)
+
+
+# ---------------------------------------------------------------------------
+# Stylized rating-transition data for exp_2, exp_6, exp_8, exp_9 and exp_10.
+#
+# Section 5 of the paper computes its empirical illustrations from the S&P
+# Global Ratings 2024 annual corporate default and transition study: global
+# and regional one-year average transition matrices, the 2024 one-year
+# matrix, and annual default/upgrade/downgrade rates by rating category.
+# That study is a proprietary PDF report; it is not served by the QuantX
+# Dataloader (OHLCV bars) or by the Massive REST API (reference, trades,
+# quotes, corporate actions), so its exact published figures cannot be
+# retrieved through either data path used by this replication (see
+# results/RESULTS.md, "Deviations from the paper").
+#
+# ``stylized_sp_transition_matrix`` generates a seven-category rating system
+# (AAA, AA, A, BBB, BB, B, CCC/C, plus an absorbing Default state) with the
+# qualitative shape the paper describes for agency data: monotone decay of
+# credit quality, a one-year default probability that increases sharply in
+# the lower categories, and small off-diagonal upward jumps into CCC/C from
+# the top categories that break strict stochastic monotonicity (page 46:
+# "largest violation ... caused by small upward-jump frequencies of the top
+# categories into CCC/C"). The paper's own calibration transforms (scaling
+# the default column, replacing it with regime-specific mean default rates)
+# are implemented in src/rating_data.py and applied to this base matrix.
+# ---------------------------------------------------------------------------
+
+RATINGS = ["AAA", "AA", "A", "BBB", "BB", "B", "CCC/C"]
+N_RATINGS = len(RATINGS)  # non-default categories
+DEFAULT_INDEX = 0  # index 0 of the full (m+1)-state chain is Default
+# Full state ordering used everywhere: [Default, AAA, ..., CCC/C]
+
+
+def stylized_sp_transition_matrix() -> np.ndarray:
+    """Stylized one-year migration matrix (rows/cols: Default, AAA..CCC/C).
+
+    Off-diagonal migration intensities decay geometrically with rating
+    distance, upper categories are more stable than lower ones, and default
+    probabilities increase sharply towards CCC/C -- the qualitative pattern
+    described in Sec. 5.1. Rows sum to one by construction.
+    """
+    n = N_RATINGS + 1
+    # one-year default probability by rating (illustrative, increasing down the scale)
+    default_prob = np.array([0.0000, 0.0002, 0.0006, 0.0018, 0.0070, 0.0400, 0.2600])
+    # stability (probability of staying in the same rating) by rating
+    stay_prob = np.array([0.92, 0.90, 0.88, 0.85, 0.80, 0.72, 0.55])
+    mat = np.zeros((n, n))
+    mat[DEFAULT_INDEX, DEFAULT_INDEX] = 1.0  # default is absorbing
+    for i in range(N_RATINGS):
+        row = np.zeros(n)
+        row[DEFAULT_INDEX] = default_prob[i]
+        row[i + 1] = stay_prob[i]
+        remaining = 1.0 - default_prob[i] - stay_prob[i]
+        # distribute the remainder geometrically over the other non-default ratings
+        others = [j for j in range(N_RATINGS) if j != i]
+        weights = np.array([0.5 ** abs(i - j) for j in others], dtype=float)
+        # small upward-jump component into CCC/C from the top ratings, breaking
+        # strict stochastic monotonicity as described on page 46
+        if i <= 2:
+            jump_target = N_RATINGS - 1
+            if jump_target in others:
+                weights[others.index(jump_target)] += 0.6
+        weights = weights / weights.sum()
+        for w, j in zip(weights, others):
+            row[j + 1] += remaining * w
+        mat[i + 1] = row
+    assert np.allclose(mat.sum(axis=1), 1.0, atol=1e-10)
+    return mat
