@@ -1,6 +1,6 @@
 {
   "K_years": 7,
-  "n_paths": 200000,
+  "n_paths": 1000000,
   "krylov_singular_values": [
     6.373514239759283,
     0.4954708124623396,
@@ -24,65 +24,65 @@
     "BB": [
       {
         "m": 1,
-        "bootstrap_abs_residual": 0.13905224031475227,
-        "market_abs_residual": 0.17911498635937886
+        "bootstrap_abs_residual": 0.13913701381672613,
+        "market_abs_residual": 0.1794711217068414
       },
       {
         "m": 2,
-        "bootstrap_abs_residual": 0.07566101353561572,
-        "market_abs_residual": 0.03780023059135236
+        "bootstrap_abs_residual": 0.0758377981996965,
+        "market_abs_residual": 0.037736863644577165
       },
       {
         "m": 3,
-        "bootstrap_abs_residual": 0.040859069774459855,
-        "market_abs_residual": 0.011562576265573802
+        "bootstrap_abs_residual": 0.04097347224590249,
+        "market_abs_residual": 0.011561823070135771
       },
       {
         "m": 4,
-        "bootstrap_abs_residual": 0.020483113674136983,
-        "market_abs_residual": 8.294006049378751e-05
+        "bootstrap_abs_residual": 0.02052481530557718,
+        "market_abs_residual": 8.295139012175184e-05
       },
       {
         "m": 5,
-        "bootstrap_abs_residual": 0.008679041158686849,
-        "market_abs_residual": 5.207493666732779e-07
+        "bootstrap_abs_residual": 0.008695152297144867,
+        "market_abs_residual": 5.205043378479235e-07
       },
       {
         "m": 6,
-        "bootstrap_abs_residual": 0.0024817599863482557,
-        "market_abs_residual": 1.4480986336404267e-09
+        "bootstrap_abs_residual": 0.0024715669513349055,
+        "market_abs_residual": 1.448098635071282e-09
       }
     ],
     "B": [
       {
         "m": 1,
-        "bootstrap_abs_residual": 0.18409601159826075,
-        "market_abs_residual": 0.33176481391755985
+        "bootstrap_abs_residual": 0.18338814318698077,
+        "market_abs_residual": 0.33158799998370486
       },
       {
         "m": 2,
-        "bootstrap_abs_residual": 0.09880428402730199,
-        "market_abs_residual": 0.12786936241529348
+        "bootstrap_abs_residual": 0.09822387992366022,
+        "market_abs_residual": 0.1283109927972263
       },
       {
         "m": 3,
-        "bootstrap_abs_residual": 0.058807013747139335,
-        "market_abs_residual": 0.0030852774297756413
+        "bootstrap_abs_residual": 0.058489072378594804,
+        "market_abs_residual": 0.0030907942781324
       },
       {
         "m": 4,
-        "bootstrap_abs_residual": 0.03364455577175812,
-        "market_abs_residual": 9.774853593855374e-05
+        "bootstrap_abs_residual": 0.03345545589084637,
+        "market_abs_residual": 9.778038652841472e-05
       },
       {
         "m": 5,
-        "bootstrap_abs_residual": 0.01676459508541893,
-        "market_abs_residual": 3.103663057560541e-07
+        "bootstrap_abs_residual": 0.016682430935596817,
+        "market_abs_residual": 3.102721875046921e-07
       },
       {
         "m": 6,
-        "bootstrap_abs_residual": 0.005794162305344329,
-        "market_abs_residual": 6.500440149465047e-10
+        "bootstrap_abs_residual": 0.005756593444866781,
+        "market_abs_residual": 6.500440129189044e-10
       }
     ]
   }

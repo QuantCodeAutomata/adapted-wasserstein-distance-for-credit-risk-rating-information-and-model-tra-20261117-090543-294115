@@ -278,8 +278,9 @@ CIR (σ∈{0.04,0.08,0.12}, κ=0.3, θ=0.03, λ₀=0.02, dt=1/250) market models
 
 File: `results/exp10_results.json`, `results/exp10_window_hedge.png`.
 
-Setup: seven-year bucket, 200,000 paths, review model, ratings BB and B,
-liquidity window m=1..6.
+Setup: seven-year bucket, 1,000,000 paths (the paper's Sec. 5.3 sample size
+for distributional quantities), review model, ratings BB and B, liquidity
+window m=1..6.
 
 * **Krylov spanning (Proposition 4.28)**: singular values of
   [1, K̂·1, …, K̂⁶·1] are 6.374, 0.495, 0.0564, 0.00259, 7.2e-5, 3.2e-7,
@@ -292,9 +293,9 @@ liquidity window m=1..6.
   the stylized matrix having fewer distinguishable rating transitions than
   the real S&P data (see "Deviations from the paper").
 * **Market desk vs bootstrap desk**: for BB, the market desk's absolute
-  residual falls from 0.179 (m=1) to 0.0378 (m=2, −79%), to 0.0116 (m=3,
+  residual falls from 0.179 (m=1) to 0.0377 (m=2, −79%), to 0.0116 (m=3,
   an order of magnitude below m=1), and to 8.3e-5 by m=4 (near-exact); the
-  bootstrap desk only falls from 0.139 to 0.0757 (−46%) to 0.0409 (m=3) and
+  bootstrap desk only falls from 0.139 to 0.0758 (−45%) to 0.0410 (m=3) and
   0.0205 (m=4) — monotone but far slower. This matches the paper's
   qualitative claims: "the market desk reduces its error by more than half
   at m=2, by an order of magnitude at m=3, and is exact from m=4 on" and

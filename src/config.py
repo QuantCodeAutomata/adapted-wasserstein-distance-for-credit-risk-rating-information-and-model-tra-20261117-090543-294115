@@ -128,6 +128,6 @@ EXP9_CIR_PATHS_RUN = 50_000  # reduced so the fine (dt=1/250) path array stays w
 # ---------------------------------------------------------------------------
 EXP10_K_YEARS = 7  # bond maturity, annual pins
 EXP10_PATHS_PAPER = 1_000_000  # paper's Monte Carlo sample size for distributional quantities (Sec. 5.3: "10^6 paths")
-EXP10_PATHS_RUN = 200_000  # executed sample size, reduced to keep the run time short; see results/RESULTS.md
+EXP10_PATHS_RUN = 1_000_000  # executed sample size, equal to the paper's (measured peak memory and runtime are both small on the stylized 7-state chain)
 EXP10_WINDOW_RANGE = np.arange(1, EXP10_K_YEARS)  # liquidity windows m = 1,...,K-1
 EXP10_SVD_THRESHOLD = 1e-3  # relative threshold to read off the Krylov dimension d; not specified in the paper
