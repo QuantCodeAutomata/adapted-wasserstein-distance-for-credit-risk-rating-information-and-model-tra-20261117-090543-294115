@@ -1,7 +1,10 @@
 # Adapted Wasserstein Distance for Credit Risk: Rating Information and Model-Transfer Hedging
 
 Replication of ten numerical experiments from *Adapted Wasserstein Distance
-for Credit Risk: Rating Information and Model-Transfer Hedging*.
+for Credit Risk: Rating Information and Model-Transfer Hedging*, by Luca Di
+Persio (Department of Computer Science, University of Verona) and Francesco
+Mattesini (Department of Mathematics, Technical University of Munich, and
+Munich Center for Machine Learning).
 
 The paper studies the adapted (bicausal, nested) Wasserstein distance between
 discrete- and continuous-time defaultable-bond price models driven by rating

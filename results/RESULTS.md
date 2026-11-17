@@ -1,5 +1,10 @@
 # Results — Adapted Wasserstein Distance for Credit Risk: Rating Information and Model-Transfer Hedging
 
+Paper: *Adapted Wasserstein Distance for Credit Risk: Rating Information and
+Model-Transfer Hedging*, by Luca Di Persio (University of Verona) and
+Francesco Mattesini (Technical University of Munich and Munich Center for
+Machine Learning).
+
 All numbers below are read from the JSON/CSV/PNG files produced by the final
 run of `python -m exp.exp1` through `python -m exp.exp10` and saved directly
 in `results/`. Each section names the theorem, equation, table or figure of
