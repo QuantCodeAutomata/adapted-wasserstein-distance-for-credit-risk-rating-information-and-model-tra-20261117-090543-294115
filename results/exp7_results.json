@@ -1,0 +1,550 @@
+{
+  "p": 0.9,
+  "robust_call_premium": [
+    {
+      "eta": 0.001,
+      "k": 0.7,
+      "robust_premium": 0.20038888888888895,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.00038888888888888307,
+      "extremizer_price_check": 0.20038888888888895,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.001,
+      "k": 0.8,
+      "robust_premium": 0.10044444444444442,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.00044444444444444176,
+      "extremizer_price_check": 0.10044444444444442,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.001,
+      "k": 0.85,
+      "robust_premium": 0.050472222222222266,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.0004722222222222211,
+      "extremizer_price_check": 0.050472222222222266,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.001,
+      "k": 0.9,
+      "robust_premium": 0.0005,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0005,
+      "extremizer_price_check": 0.0005,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.001,
+      "k": 0.95,
+      "robust_premium": 0.0002500000000000003,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0002500000000000003,
+      "extremizer_price_check": 0.0002500000000000003,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.001,
+      "k": 0.98,
+      "robust_premium": 0.00010000000000000011,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.00010000000000000011,
+      "extremizer_price_check": 0.00010000000000000011,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.7,
+      "robust_premium": 0.2019444444444445,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.001944444444444443,
+      "extremizer_price_check": 0.2019444444444445,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.8,
+      "robust_premium": 0.1022222222222222,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.0022222222222222227,
+      "extremizer_price_check": 0.1022222222222222,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.85,
+      "robust_premium": 0.05236111111111116,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.0023611111111111124,
+      "extremizer_price_check": 0.05236111111111116,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.9,
+      "robust_premium": 0.0025,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0025,
+      "extremizer_price_check": 0.0025,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.95,
+      "robust_premium": 0.0012500000000000013,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0012500000000000013,
+      "extremizer_price_check": 0.0012500000000000013,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.005,
+      "k": 0.98,
+      "robust_premium": 0.0005000000000000006,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0005000000000000006,
+      "extremizer_price_check": 0.0005000000000000006,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.7,
+      "robust_premium": 0.20388888888888895,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.003888888888888886,
+      "extremizer_price_check": 0.20388888888888895,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.8,
+      "robust_premium": 0.10444444444444442,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.004444444444444445,
+      "extremizer_price_check": 0.10444444444444441,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.85,
+      "robust_premium": 0.05472222222222227,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.004722222222222225,
+      "extremizer_price_check": 0.05472222222222226,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.9,
+      "robust_premium": 0.005,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.005,
+      "extremizer_price_check": 0.005,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.95,
+      "robust_premium": 0.0025000000000000027,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.0025000000000000027,
+      "extremizer_price_check": 0.0025000000000000027,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.01,
+      "k": 0.98,
+      "robust_premium": 0.001000000000000001,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.001000000000000001,
+      "extremizer_price_check": 0.001000000000000001,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.7,
+      "robust_premium": 0.20777777777777784,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.007777777777777772,
+      "extremizer_price_check": 0.20777777777777784,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.8,
+      "robust_premium": 0.10888888888888887,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.00888888888888889,
+      "extremizer_price_check": 0.10888888888888888,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.85,
+      "robust_premium": 0.05944444444444449,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.009444444444444443,
+      "extremizer_price_check": 0.059444444444444494,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.9,
+      "robust_premium": 0.01,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.01,
+      "extremizer_price_check": 0.01,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.95,
+      "robust_premium": 0.005000000000000005,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.005000000000000005,
+      "extremizer_price_check": 0.005000000000000005,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.02,
+      "k": 0.98,
+      "robust_premium": 0.002000000000000002,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.002000000000000002,
+      "extremizer_price_check": 0.002000000000000002,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.7,
+      "robust_premium": 0.2155555555555556,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.015555555555555545,
+      "extremizer_price_check": 0.2155555555555556,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.8,
+      "robust_premium": 0.11777777777777776,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.01777777777777778,
+      "extremizer_price_check": 0.11777777777777776,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.85,
+      "robust_premium": 0.06888888888888893,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.018888888888888886,
+      "extremizer_price_check": 0.06888888888888893,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.9,
+      "robust_premium": 0.02,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.02,
+      "extremizer_price_check": 0.02,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.95,
+      "robust_premium": 0.01000000000000001,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.01000000000000001,
+      "extremizer_price_check": 0.01000000000000001,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.04,
+      "k": 0.98,
+      "robust_premium": 0.004000000000000004,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.004000000000000004,
+      "extremizer_price_check": 0.004000000000000004,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.7,
+      "robust_premium": 0.23111111111111118,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.031111111111111117,
+      "extremizer_price_check": 0.23111111111111118,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.8,
+      "robust_premium": 0.13555555555555554,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.03555555555555556,
+      "extremizer_price_check": 0.13555555555555554,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.85,
+      "robust_premium": 0.08777777777777782,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.03777777777777777,
+      "extremizer_price_check": 0.08777777777777782,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.9,
+      "robust_premium": 0.04,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.04,
+      "extremizer_price_check": 0.04,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.95,
+      "robust_premium": 0.02000000000000002,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.02000000000000002,
+      "extremizer_price_check": 0.02000000000000002,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.08,
+      "k": 0.98,
+      "robust_premium": 0.008000000000000009,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.008000000000000009,
+      "extremizer_price_check": 0.008000000000000009,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.7,
+      "robust_premium": 0.2583333333333334,
+      "coarse_premium": 0.20000000000000007,
+      "premium_above_coarse": 0.05833333333333335,
+      "extremizer_price_check": 0.25833333333333336,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.8,
+      "robust_premium": 0.16666666666666663,
+      "coarse_premium": 0.09999999999999998,
+      "premium_above_coarse": 0.06666666666666665,
+      "extremizer_price_check": 0.16666666666666663,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.85,
+      "robust_premium": 0.12083333333333338,
+      "coarse_premium": 0.050000000000000044,
+      "premium_above_coarse": 0.07083333333333333,
+      "extremizer_price_check": 0.12083333333333336,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.9,
+      "robust_premium": 0.075,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.075,
+      "extremizer_price_check": 0.075,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.95,
+      "robust_premium": 0.03750000000000004,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.03750000000000004,
+      "extremizer_price_check": 0.03750000000000004,
+      "extremizer_matches_formula": true
+    },
+    {
+      "eta": 0.15,
+      "k": 0.98,
+      "robust_premium": 0.015000000000000017,
+      "coarse_premium": 0.0,
+      "premium_above_coarse": 0.015000000000000017,
+      "extremizer_price_check": 0.015000000000000015,
+      "extremizer_matches_formula": true
+    }
+  ],
+  "mad_lipschitz_bound": [
+    {
+      "eta": 0.001,
+      "lhs": 0.001,
+      "rhs": 0.001,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.005,
+      "lhs": 0.005,
+      "rhs": 0.005,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.01,
+      "lhs": 0.01,
+      "rhs": 0.01,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.02,
+      "lhs": 0.02,
+      "rhs": 0.02,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.04,
+      "lhs": 0.04,
+      "rhs": 0.04,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.08,
+      "lhs": 0.08,
+      "rhs": 0.08,
+      "bound_holds": 1.0
+    },
+    {
+      "eta": 0.15,
+      "lhs": 0.15,
+      "rhs": 0.15,
+      "bound_holds": 1.0
+    }
+  ],
+  "small_dispersion": [
+    {
+      "epsilon": 0.1,
+      "aw2_exact": 0.4214709814476123,
+      "w2_exact": 0.25121776926581263,
+      "aw2_predicted": 0.4242640687119285,
+      "w2_predicted": 0.25455844122715715,
+      "ratio_exact": 1.67771166299011,
+      "ratio_predicted": 1.6666666666666667,
+      "aw2_mc": 0.4214720211693746
+    },
+    {
+      "epsilon": 0.05336699231206309,
+      "aw2_exact": 0.30935006403195375,
+      "w2_exact": 0.13533664880994425,
+      "aw2_predicted": 0.3099364227736288,
+      "w2_predicted": 0.1358501837594046,
+      "ratio_exact": 2.2857819131193335,
+      "ratio_predicted": 2.281457515895135,
+      "aw2_mc": 0.30936780868666675
+    },
+    {
+      "epsilon": 0.02848035868435802,
+      "aw2_exact": 0.2262946627281797,
+      "w2_exact": 0.07242085034643539,
+      "aw2_predicted": 0.22641697293234098,
+      "w2_predicted": 0.07249915712280505,
+      "ratio_exact": 3.1247170068518546,
+      "ratio_predicted": 3.12302903810064,
+      "aw2_mc": 0.22627946690205464
+    },
+    {
+      "epsilon": 0.01519911082952934,
+      "aw2_exact": 0.1653782807582923,
+      "w2_exact": 0.03867870663137247,
+      "aw2_predicted": 0.16540374691388587,
+      "w2_predicted": 0.03869061960803792,
+      "ratio_exact": 4.27569314389001,
+      "ratio_predicted": 4.275034842800075,
+      "aw2_mc": 0.16537524116456556
+    },
+    {
+      "epsilon": 0.008111308307896872,
+      "aw2_exact": 0.12082662902363148,
+      "w2_exact": 0.020646208846585454,
+      "aw2_predicted": 0.1208319285380084,
+      "w2_predicted": 0.020648019991711175,
+      "ratio_exact": 5.852242894637493,
+      "ratio_predicted": 5.851986223691886,
+      "aw2_mc": 0.12082490056846247
+    },
+    {
+      "epsilon": 0.004328761281083062,
+      "aw2_exact": 0.08826990223392346,
+      "w2_exact": 0.011018951942890287,
+      "aw2_predicted": 0.0882710048993978,
+      "w2_predicted": 0.01101922724156976,
+      "ratio_exact": 8.010734840428947,
+      "ratio_predicted": 8.010634771773983,
+      "aw2_mc": 0.08827000397109352
+    },
+    {
+      "epsilon": 0.00231012970008316,
+      "aw2_exact": 0.0644841365925027,
+      "w2_exact": 0.005880588311008627,
+      "aw2_predicted": 0.06448436601339652,
+      "w2_predicted": 0.005880630154857292,
+      "ratio_exact": 10.965592757409421,
+      "ratio_predicted": 10.9655537442928,
+      "aw2_mc": 0.06448415824390043
+    },
+    {
+      "epsilon": 0.0012328467394420659,
+      "aw2_exact": 0.04710753266564549,
+      "w2_exact": 0.0031383090827118137,
+      "aw2_predicted": 0.04710758039844244,
+      "w2_predicted": 0.0031383154426435542,
+      "ratio_exact": 15.010482213224154,
+      "ratio_predicted": 15.010467003521311,
+      "aw2_mc": 0.047107566907655
+    },
+    {
+      "epsilon": 0.0006579332246575682,
+      "aw2_exact": 0.03441335672170687,
+      "w2_exact": 0.0016748235943490589,
+      "aw2_predicted": 0.034413366652851954,
+      "w2_predicted": 0.0016748245610038756,
+      "ratio_exact": 20.547451587032395,
+      "ratio_predicted": 20.547445657367767,
+      "aw2_mc": 0.03441336365548388
+    },
+    {
+      "epsilon": 0.0003511191734215135,
+      "aw2_exact": 0.025139896743392426,
+      "w2_exact": 0.0008938033477884246,
+      "aw2_predicted": 0.025139898809635738,
+      "w2_predicted": 0.0008938034947114833,
+      "ratio_exact": 28.12687690821156,
+      "ratio_predicted": 28.126874596469115,
+      "aw2_mc": 0.02513984463388109
+    },
+    {
+      "epsilon": 0.0001873817422860385,
+      "aw2_exact": 0.018365378306052848,
+      "w2_exact": 0.0004769960199765841,
+      "aw2_predicted": 0.018365378735949588,
+      "w2_predicted": 0.00047699604230762836,
+      "ratio_exact": 38.50216256931119,
+      "ratio_predicted": 38.50216166805266,
+      "aw2_mc": 0.018365356499211977
+    },
+    {
+      "epsilon": 0.0001,
+      "aw2_exact": 0.013416407775555604,
+      "w2_exact": 0.0002545584378330288,
+      "aw2_predicted": 0.01341640786499874,
+      "w2_predicted": 0.00025455844122715713,
+      "ratio_exact": 52.70462802083881,
+      "ratio_predicted": 52.70462766947299,
+      "aw2_mc": 0.013416402164815587
+    }
+  ],
+  "loglog_slope_ratio_vs_epsilon": -0.4994744653006229
+}

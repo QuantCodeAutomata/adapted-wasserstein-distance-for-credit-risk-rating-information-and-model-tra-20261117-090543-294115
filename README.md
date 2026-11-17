@@ -31,9 +31,12 @@ with deterministic or CIR hazards). No historical market prices are used:
 the only external ingredient is a rating-transition matrix, and the paper's
 actual source for it — the S&P Global Ratings 2024 annual corporate default
 and transition study — is a proprietary PDF report that is not served by the
-QuantX Dataloader or by the Massive REST API. `data/rating data` therefore
-uses a stylized seven-category transition matrix with the qualitative shape
-the paper describes (see `results/RESULTS.md`, "Deviations from the paper").
+QuantX Dataloader or by the Massive REST API. `data/generate_synthetic.py`
+therefore generates a stylized seven-category transition matrix with the
+qualitative shape the paper describes, and `src/rating_data.py` applies the
+paper's own calibration transforms to build the regional/vintage/cycle
+variants used by exp_2, exp_6, exp_8, exp_9 and exp_10 (see
+`results/RESULTS.md`, "Deviations from the paper").
 
 ## Repository layout
 
@@ -41,8 +44,8 @@ the paper describes (see `results/RESULTS.md`, "Deviations from the paper").
 src/            core library: closed-form formulas, dynamic programming,
                 Cox-hazard mismatch, bootstrap/rolling hedges, robust pricing
 exp/            one script per experiment, exp_1 .. exp_10
-data/           data/generate_synthetic.py (Monte Carlo sample generation)
-                and data/rating_matrices.py (stylized S&P-style rating data)
+data/           data/generate_synthetic.py (Monte Carlo sample generation and
+                the stylized S&P-style rating-transition matrix)
 tests/          pytest unit tests for every src/ module
 results/        tables, figures and RESULTS.md written by the experiments
 ```

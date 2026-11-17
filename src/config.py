@@ -120,6 +120,8 @@ EXP9_CIR_KAPPA = 0.3  # CIR mean-reversion speed, per year
 EXP9_CIR_THETA = 0.03  # CIR long-run mean hazard, per year
 EXP9_CIR_LAMBDA0 = 0.02  # CIR initial hazard, per year
 EXP9_CIR_DT = 1.0 / 250  # Euler-Maruyama step, per year (Sec. 5.2)
+EXP9_CIR_PATHS_PAPER = 200_000  # paper's Monte Carlo sample size for the CIR case (Sec. 5.2)
+EXP9_CIR_PATHS_RUN = 50_000  # reduced so the fine (dt=1/250) path array stays within the process memory budget; see results/RESULTS.md
 
 # ---------------------------------------------------------------------------
 # exp_10: hedging with a liquidity window of bonds (Sec. 4.8, Sec. 5.3)

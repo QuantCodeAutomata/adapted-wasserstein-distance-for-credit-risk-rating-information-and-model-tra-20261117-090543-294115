@@ -84,6 +84,6 @@ def test_krylov_matrix_columns_match_powers():
 def test_market_desk_weights_exact_match_when_m_equals_dimension():
     K_hat = np.array([[0.8, 0.1], [0.2, 0.7]])
     theta = market_desk_weights(K_hat, k=0, K_total=2, m=2)
-    basis = krylov_matrix(K_hat, 2)
-    target = K_hat @ np.ones(2)
+    basis = np.column_stack([K_hat @ np.ones(2), K_hat @ (K_hat @ np.ones(2))])
+    target = K_hat @ (K_hat @ np.ones(2))
     assert np.allclose(basis @ theta, target, atol=1e-8)
